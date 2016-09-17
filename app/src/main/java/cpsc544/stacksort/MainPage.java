@@ -24,6 +24,7 @@ public class MainPage extends AppCompatActivity {
         // variable definitions
         ImageButton getHelp = (ImageButton) findViewById(R.id.helpBtn);
         ImageButton getAbout = (ImageButton) findViewById(R.id.aboutButton);
+        Button exitApp = (Button) findViewById(R.id.exitButton);
         final Button getSort = (Button) findViewById(R.id.sortBtn);
         final EditText in;          // in is the number pad on main page
         in = (EditText) findViewById(R.id.userInput);
@@ -46,9 +47,26 @@ public class MainPage extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
         });
-
+        //*****************************************************************;
+        // This is the exit button business
 
         //***************************************************************************************
+
+        exitApp.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View lView) {
+
+
+
+                finish();
+                moveTaskToBack(true);
+
+
+
+            }
+        });
+
+
+
         // the following lines of code are to make the help button take you to the help activity
         getHelp.setOnClickListener(new View.OnClickListener() {
             public void onClick(View mView) {
